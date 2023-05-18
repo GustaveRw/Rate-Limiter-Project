@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Run Project",
+        "type": "node",
+        "request": "launch",
+        "program": "api-rate-limiter/src/server.js",
+        "env": {
+          "NODE_ENV": "development"
+        }
+      },
+      {
+        "name": "Run Tests",
+        "type": "node",
+        "request": "launch",
+        "program": "api-rate-limiter/node_modules/mocha/bin/_mocha",
+        "args": [
+          "--timeout",
+          "5000",
+          "api-rate-limiter/test"
+        ],
+        "internalConsoleOptions": "openOnSessionStart"
+      }
+    ]
+  }
+  
