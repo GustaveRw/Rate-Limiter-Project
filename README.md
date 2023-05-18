@@ -11,41 +11,10 @@ The rate limiter system consists of the following components:
 - **Redis Cache**: Utilized for tracking and enforcing rate limits on a per-client and system-wide basis.
 - **Node.js Application**: Implements the API endpoints and applies rate limiting middleware to enforce the limits.
 
-For a detailed overview of the system design, refer to the [System Design Diagram](#system-design-diagram) section.
+
+
 ![](images/rate_limiter_high_level_design.png)
 
-## Project Structure
-
-The project follows the following directory structure:
-
-rate-limiter-project/
-├── src/
-│   ├── middleware/
-│   │   ├── rateLimitMiddleware.js
-│   │   ├── perMonthRateLimitMiddleware.js
-│   │   └── systemRateLimitMiddleware.js
-│   ├── routes/
-│   │   └── apiRoutes.js
-│   ├── models/
-│   │   └── clientModel.js
-│   ├── utils/
-│   │   ├── redisClient.js
-│   │   ├── config.js
-│   │   └── database.js
-│   └── server.js
-├── test/
-│   ├── middleware/
-│   │   ├── rateLimitMiddleware.test.js
-│   │   ├── perMonthRateLimitMiddleware.test.js
-│   │   └── systemRateLimitMiddleware.test.js
-│   ├── models/
-│   │   └── clientModel.test.js
-│   └── utils/
-│       └── redisClient.test.js
-├── launch.json
-├── package-lock.json
-└── package.json
-├── README.md
 
 
 ## Installation
